@@ -31,11 +31,18 @@ int main(int argc, char *argv[])
     int a = std::stoi(argv[2]);
     int b = std::stoi(argv[3]);
 
-    // suma
-    if(std::strcmp(argv[1],"sum")==0){
-        std::cout<<ArithmeticLibrary::sum(a,b);
+    // suma wersja 1
+    if(std::strcmp(argv[1],"sum1")==0){
+        std::cout<<ArithmeticLibrary::sum_v1(a,b);
         return 0;
     }
+
+    // suma wersja 2
+    if(std::strcmp(argv[1],"sum2")==0){
+        std::cout<<ArithmeticLibrary::sum_v2(a,b);
+        return 0;
+    }
+
 
     // różnica
     if(std::strcmp(argv[1],"subtract")==0){
