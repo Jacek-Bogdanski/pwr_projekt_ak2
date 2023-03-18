@@ -3,9 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-    std::cout<<"Hello, World!"<<std::endl;
-    // test commit
-    ArithmeticLibrary lib;
-    std::cout<<lib.sum(1,3)<<std::endl;
+    if(argc==0){
+        return 1;
+    }
+
+    std::cout<<argv[0]<<ArithmeticLibrary::sum(1,3)<<std::endl;
     return 0;
 }
