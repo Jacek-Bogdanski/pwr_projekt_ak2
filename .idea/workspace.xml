@@ -11,7 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="pwr_projekt_ak2" targetName="pwr_projekt_ak2" />
+      <config projectName="pwr_projekt_ak2" targetName="arithmeticLibrary" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -21,12 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pwr_projekt_ak2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,14 +77,19 @@
       <recent name="$PROJECT_DIR$/pwr_projekt_ak2/source" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.pwr_projekt_ak2">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="CMake Application.arithmeticLibrary">
     <configuration name="pwr_projekt_ak2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="arithmeticLibrary" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="sum 1 4" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="arithmeticLibrary" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="arithmeticLibrary">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration name="pwr_projekt_ak2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-sum" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="pwr_projekt_ak2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="pwr_projekt_ak2">
       <method v="2">
@@ -94,6 +97,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="CMake Application.arithmeticLibrary" />
       <item itemvalue="CMake Application.pwr_projekt_ak2" />
       <item itemvalue="CMake Debug.pwr_projekt_ak2" />
     </list>
@@ -108,7 +112,10 @@
       <updated>1679148840127</updated>
       <workItem from="1679148842958" duration="3442000" />
       <workItem from="1679157190381" duration="1053000" />
-      <workItem from="1679158246861" duration="356000" />
+      <workItem from="1679158246861" duration="693000" />
+      <workItem from="1679158949803" duration="27000" />
+      <workItem from="1679158977985" duration="37000" />
+      <workItem from="1679159015697" duration="2963000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1679148961273</created>
@@ -131,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679157292949</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1679158610907</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679158610907</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.24)
 project (pwr_projekt_ak2)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -S")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -S")
 
 set(SOURCE_FILES
         main.cpp
@@ -10,4 +10,4 @@ set(SOURCE_FILES
         source/ArithmeticLibrary.h
         )
 
-add_executable(pwr_projekt_ak2 ${SOURCE_FILES})
+add_executable(arithmeticLibrary ${SOURCE_FILES})
