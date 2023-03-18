@@ -8,6 +8,4 @@ int ArithmeticLibrary::sum(int a, int b) {
     return a+b;
 }
 
-ArithmeticLibrary::ArithmeticLibrary() {
-
-}
+ArithmeticLibrary::ArithmeticLibrary() = default;
