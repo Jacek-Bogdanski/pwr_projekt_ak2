@@ -8,7 +8,7 @@ Jacek Bogdański & Michał Kaźmierczak
 ## Pierwsze uruchomienie
 
 1. Otwórz folder `pwr_projekt_ak2/cmake-build-debug` w terminalu / wierszu poleceń
-2. Uruchom polecenie ./aLib sum 1 2
+2. Uruchom polecenie `./calc sum 1 2`
 3. Wykonanie programu spowoduje wyświetlenie liczby 3
 
 ## Użytkownanie
@@ -31,13 +31,13 @@ Brak przekazania jednego operandu w parametrze spowoduje automatyczne uruchomien
 Wymagane jest podanie nazwy operacji i dwóch operandów: 
 
 ```bash 
-./aLib sum 1 2
+./calc sum 1 2
 ```
 
 Opcjonalnie można włączyć tryb debugowania:
 
 ```bash 
-./aLib sum 1 2 -d
+./calc sum 1 2 -d
 ```
 
 ### Tryb potokowego wywołania
@@ -60,7 +60,7 @@ Działania zostaną wykonane w następujący sposób:
 Wówczas wywołanie:
 
 ```bash 
-./aLib sum 9 21 | ./aLib divide 3 
+./calc sum 9 21 | ./calc divide 3 
 ```
 
 Jest równoważne wyrażeniu (9 + 21) / 6.
@@ -69,7 +69,7 @@ Jest równoważne wyrażeniu (9 + 21) / 6.
 **UWAGA: opcję debugowania można uruchomić wyłącznie w ostatnim wywołaniu!**
 
 ```bash 
-./aLib sum 1 2 | ./aLib multiply 6 | ./aLib sum 8 -d
+./calc sum 1 2 | ./calc multiply 6 | ./calc sum 8 -d
 ```
 
 ### Przykłady wywołań
@@ -77,32 +77,32 @@ Jest równoważne wyrażeniu (9 + 21) / 6.
 --- 
 Obliczenie sumy liczb 2 i 4:
 ```bash
-./aLib sum 2 4
+./calc sum 2 4
 ```
 
 
 Obliczenie różnicy liczb 9 i 5:
 ```bash
-./aLib subtract 9 5
+./calc subtract 9 5
 ```
 
 
 Obliczenie iloczynu liczb 2 i 3:
 ```bash
-./aLib multiply 2 3
+./calc multiply 2 3
 ```
 
 
 Obliczenie ilorazu liczb 9 i 2:
 ```bash
-./aLib divide 2 3
+./calc divide 2 3
 ```
 
 Włączenie trybu debugowania:
 ```bash
-./aLib divide 2 3 -d
+./calc divide 2 3 -d
 ```
 lub
 ```bash
-./aLib divide 2 3 -debug
+./calc divide 2 3 -debug
 ```
