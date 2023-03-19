@@ -6,13 +6,15 @@
 #define PWR_PROJEKT_AK2_ARITHMETICLIBRARY_H
 
 class ArithmeticLibrary {
-
 public:
+    static bool debugMode;
     static int sum_v1(int a, int b);
     static int sum_v2(int a, int b);
     static int subtract(int a, int b);
     static int multiply(int a, int b);
     static int divide(int a, int b);
+
+    static void setDebugMode(bool mode);
 
     ArithmeticLibrary();
 };
