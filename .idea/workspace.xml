@@ -20,13 +20,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="update">
+    <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="update execution method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +66,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -80,11 +78,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.aLib">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="pwr_projekt_ak2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
       <method v="2" />
     </configuration>
@@ -124,6 +117,8 @@
       <workItem from="1679158949803" duration="27000" />
       <workItem from="1679158977985" duration="37000" />
       <workItem from="1679159015697" duration="2963000" />
+      <workItem from="1679235043917" duration="1000" />
+      <workItem from="1679235246579" duration="85000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1679148961273</created>

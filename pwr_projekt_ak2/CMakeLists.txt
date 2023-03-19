@@ -10,4 +10,4 @@ set(SOURCE_FILES
         source/ArithmeticLibrary.h
         )
 
-add_executable(aLib ${SOURCE_FILES})
+add_executable(calc ${SOURCE_FILES})
