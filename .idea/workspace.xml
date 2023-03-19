@@ -11,7 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="pwr_projekt_ak2" targetName="arithmeticLibrary" />
+      <config projectName="pwr_projekt_ak2" targetName="aLib" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -22,9 +22,11 @@
   <component name="ChangeListManager">
     <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +79,16 @@
       <recent name="$PROJECT_DIR$/pwr_projekt_ak2/source" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.arithmeticLibrary">
+  <component name="RunManager" selected="CMake Application.aLib">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="pwr_projekt_ak2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="aLib" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="sum 8 2" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="aLib" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="aLib">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -99,6 +106,7 @@
     <list>
       <item itemvalue="CMake Application.arithmeticLibrary" />
       <item itemvalue="CMake Application.pwr_projekt_ak2" />
+      <item itemvalue="CMake Application.aLib" />
       <item itemvalue="CMake Debug.pwr_projekt_ak2" />
     </list>
   </component>
