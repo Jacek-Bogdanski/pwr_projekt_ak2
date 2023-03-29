@@ -7,7 +7,7 @@ Jacek Bogdański & Michał Kaźmierczak
 
 ## Pierwsze uruchomienie
 
-1. Otwórz folder `pwr_projekt_ak2/cmake-build-debug` w terminalu / wierszu poleceń
+1. Otwórz folder z plikiem wykonywalnym projektu (domyślnie jest to `pwr_projekt_ak2/cmake-build-debug`) w terminalu / wierszu poleceń
 2. Uruchom polecenie `./calc sum 1 2`
 3. Wykonanie programu spowoduje wyświetlenie liczby 3
 
@@ -19,9 +19,19 @@ Każde polecenie składa się z następujących elementów:
 
 1. Nazwa operacji: `sum, subtract, multiply, divide`
 2. Operandy: `4-bitowe liczby całkowite`
-4. (opcjonalny) Przełącznik trybu debugowania: `-d, -debug` - uruchamia wyświetlanie danych pomocniczych
+4. (opcjonalny) Przełącznik trybu debugowania: `-d, --debug` - uruchamia wyświetlanie danych pomocniczych
 
 Parametry można zamieszczać w dowolnej kolejności, przy czym <b>należy zachować kolejność operandów!</b>
+
+```bash 
+./calc -d sum 1 2 
+```
+```bash 
+./calc 1 sum 2 -d
+```
+```bash 
+./calc 1 2 sum -d
+```
 
 Program umożliwia pracę w dwóch trybach: tryb pojedynczego wywołania i tryb potokowych wywołań. 
 Brak przekazania jednego operandu w parametrze spowoduje automatyczne uruchomienie trybu potokowych wywołań.
@@ -104,5 +114,5 @@ Włączenie trybu debugowania:
 ```
 lub
 ```bash
-./calc divide 2 3 -debug
+./calc divide 2 3 --debug
 ```
