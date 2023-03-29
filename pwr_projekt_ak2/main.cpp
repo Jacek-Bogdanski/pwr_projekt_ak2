@@ -80,6 +80,7 @@ int main(int argc, char *argv[]) {
 
         // sprawdzenie poprawnosci wprowadzonej liczby
         char *end;
+        // TODO: pobieranie i zamiana wartości ze stringa na staloprzecinkowa
         int input = strtol(argv[i], &end, 10);
 
         // correct input
@@ -132,7 +133,7 @@ int main(int argc, char *argv[]) {
 
         case 20:
             // różnica
-            std::cout << ArithmeticLibrary::subtract(*valueA, *valueB);
+            std::cout << ArithmeticLibrary::subtract_v2(*valueA, *valueB);
             return 0;
 
         case 30:

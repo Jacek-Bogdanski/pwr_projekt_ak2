@@ -35,15 +35,18 @@ int ArithmeticLibrary::sum_v1(int a, int b) {
 
 int ArithmeticLibrary::sum_v2(int a, int b) {
     int32_t sum, carry;
-
+    std::bitset<32> a_bits, b_bits, result;
     // Zamiana liczb na binarne
     a = (a & 0x7FFFFFFF) | ((a >> 31) ? 0x80000000 : 0);
     b = (b & 0x7FFFFFFF) | ((b >> 31) ? 0x80000000 : 0);
 
+    a_bits = a;
+    b_bits = b;
+
     if (ArithmeticLibrary::debugMode) {
         std::cout << "Operation: SUM" << std::endl;
-        std::cout << "Operand 1: " << a << std::endl;
-        std::cout << "Operand 2: " << b << std::endl;
+        std::cout << "Operand 1: " << a_bits << std::endl;
+        std::cout << "Operand 2: " << b_bits << std::endl;
     }
 
     // Dodawania
@@ -62,9 +65,9 @@ int ArithmeticLibrary::sum_v2(int a, int b) {
         std::cout << "Error: Overflow occurred." << std::endl;
         return NULL;
     }
-
+    result = sum;
     if (ArithmeticLibrary::debugMode) {
-        std::cout << "Result v2: " << sum << std::endl;
+        std::cout << "Result v2: " << result << std::endl;
     }
 
     // Zamiana liczb z powrotem na U2
@@ -73,9 +76,9 @@ int ArithmeticLibrary::sum_v2(int a, int b) {
     return sum;
 }
 
-int ArithmeticLibrary::subtract(int a, int b) {
-    std::bitset<32> difference, a_bits, b_bits, carry_bits;
-
+int ArithmeticLibrary::subtract_v2(int a, int b) {
+    std::bitset<32> result, a_bits, b_bits;
+    int32_t sum, carry, difference;
     a_bits = a;
     b_bits = b;
 
@@ -85,7 +88,34 @@ int ArithmeticLibrary::subtract(int a, int b) {
         std::cout << "Operand 2:  " << b_bits << std::endl;
     }
 
-    return a - b;
+    b = ~b+1;
+    b_bits = b;
+
+    // Dodawania
+    sum = a ^ b;
+    carry = a & b;
+    while (carry != 0) {
+        carry = carry << 1;
+        a = sum;
+        b = carry;
+        sum = a ^ b;
+        carry = a & b;
+    }
+
+    // Sprawdzenie przepełnienia flaga overflow
+    if ((a < 0 && b < 0 && sum >= 0) || (a > 0 && b > 0 && sum <= 0)) {
+        std::cout << "Error: Overflow occurred." << std::endl;
+        return NULL;
+    }
+    result = sum;
+    if (ArithmeticLibrary::debugMode) {
+        std::cout << "Result v2: " << result << std::endl;
+    }
+
+    // Zamiana liczb z powrotem na U2
+    difference = (sum & 0x7FFFFFFF) | ((sum >> 31) ? 0x80000000 : 0);
+
+    return difference;
 }
 
 int ArithmeticLibrary::multiply(int a, int b) {
