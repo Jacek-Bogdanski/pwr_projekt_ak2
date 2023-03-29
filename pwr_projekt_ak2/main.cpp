@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
         // konfiguracja
 
         // tryb debugowania
-        if (std::strcmp(argv[i], "-debug") == 0 || std::strcmp(argv[i], "-d") == 0) {
+        if (std::strcmp(argv[i], "--debug") == 0 || std::strcmp(argv[i], "-d") == 0) {
             ArithmeticLibrary::setDebugMode(true);
             continue;
         }
