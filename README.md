@@ -58,7 +58,7 @@ Uruchamia się automatycznie, gdy podany zostanie jeden operand. Wówczas progra
 Polecenie składamy z następujących po sobie wywołań programu, oddzielając je znakiem `|`. 
 Pierwsze wywołanie powinno być uruchomione w trybie pojedynczgo wywołania, a każde kolejne w trybie potokowym.
 
-Jeśli program zostanie uruchomiony w trybie porokowym (zostanie podany jeden operand), a nie otrzyma danych z potoku, zatrzyma się i będzie oczekiwał podania wartości manualnie. Po wprowadzeniu liczby kontunuuje działanie.
+Jeśli program zostanie uruchomiony w trybie potokowym (zostanie podany jeden operand), a nie otrzyma danych z potoku, zatrzyma się i będzie oczekiwał podania wartości manualnie. Po wprowadzeniu liczby kontunuuje działanie.
 
 Działania zostaną wykonane w następujący sposób:
 
