@@ -4,6 +4,8 @@ project (pwr_projekt_ak2)
 set(CMAKE_CXX_STANDARD 17)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -S")
 
+enable_testing()
+
 set(SOURCE_FILES
         main.cpp
         source/ArithmeticLibrary.cpp
@@ -11,3 +13,5 @@ set(SOURCE_FILES
         )
 
 add_executable(calc ${SOURCE_FILES})
+add_subdirectory(source)
+add_subdirectory(tests)
