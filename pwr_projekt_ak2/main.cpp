@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstring>
 #include "source/ArithmeticLibrary.h"
 
 int main(int argc, char *argv[]) {
@@ -123,7 +124,7 @@ int main(int argc, char *argv[]) {
     switch (methodNum) {
         // suma wersja 1
         case 10:
-            std::cout << ArithmeticLibrary::sum_v1(*valueA, *valueB);
+            std::cout << ArithmeticLibrary::sum_v1<16>(*valueA, *valueB); // TODO: zapytac uzytkownika o precyzje
             return 0;
 
             // suma wersja 2

@@ -5,10 +5,10 @@
 #include <iostream>
 #include "ArithmeticLibrary.h"
 #include <cstdint>
-
+template <size_t N>
 int ArithmeticLibrary::sum_v1(int a, int b) {
     int carry = 0;
-    std::bitset<32> sum, a_bits, b_bits, carry_bits;
+    std::bitset<N> sum, a_bits, b_bits, carry_bits;
 
     a_bits = a;
     b_bits = b;
@@ -19,7 +19,7 @@ int ArithmeticLibrary::sum_v1(int a, int b) {
         std::cout << "Operand 2:  " << b_bits << std::endl;
     }
 
-    for (int i = 0; i < 32; i++) {
+    for (int i = 0; i < N; i++) {
         sum[i] = a_bits[i] ^ b_bits[i] ^ carry;     // potrójny XOR
         carry = (a_bits[i] & b_bits[i]) | (b_bits[i] & carry) | (carry & a_bits[i]);  // operacja AND OR AND OR AND
         carry_bits[i] = carry;                      // przeniesienie
