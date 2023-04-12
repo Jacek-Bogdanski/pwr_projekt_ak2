@@ -11,6 +11,7 @@ public:
     template <size_t N>
     static int sum_v1(int a, int b);
     static int sum_v2(int a, int b);
+    static int sum_v3_asm(int a, int b);
     static int subtract_v2(int a, int b);
     static int multiply(int a, int b);
     static int divide(int a, int b);
