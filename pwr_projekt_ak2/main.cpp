@@ -3,7 +3,7 @@
 #include <cstring>
 #include "source/ArithmeticLibrary.h"
 
-int main(int argc, char *argv[]) {
+int asd(int argc, char *argv[]) {
 
     // błąd wywołania, teoretycznie nie powinno nigdy mieć miejsca
     if (argc == 0) {

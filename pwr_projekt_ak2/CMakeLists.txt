@@ -10,7 +10,7 @@ set(SOURCE_FILES
         main.cpp
         source/ArithmeticLibrary.cpp
         source/ArithmeticLibrary.h
-        )
+        source/testy.cpp source/U2Parser.cpp)
 
 add_executable(calc ${SOURCE_FILES})
 add_subdirectory(source)
