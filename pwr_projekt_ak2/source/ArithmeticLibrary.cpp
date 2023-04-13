@@ -84,7 +84,7 @@ int ArithmeticLibrary::sum_v3_asm(int a, int b) {
         "add %2, %0;"
         "adc %3, %0;"
             : "+r" (sum)
-            : "d" (carry), "r" (a), "r" (b)
+            : "m" (carry), "r" (a), "r" (b)
             );
 
     // Check for overflow
