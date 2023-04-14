@@ -71,6 +71,13 @@ public:
      * @return precision
      */
     int getPrecision();
+
+    /**
+     * Getter for data
+     * @return data
+     */
+    std::vector<bool> getData();
+
 };
 
 

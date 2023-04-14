@@ -151,3 +151,11 @@ int TwosComplement_Num::getSize() {
 int TwosComplement_Num::getPrecision() {
     return this->precision;
 }
+
+/**
+ * Getter for data
+ * @return data
+ */
+std::vector<bool> TwosComplement_Num::getData(){
+    return this->data;
+};
