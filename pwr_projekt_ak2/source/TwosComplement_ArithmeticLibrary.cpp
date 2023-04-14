@@ -13,16 +13,16 @@ namespace TwosComplement {
 
     TwosComplement_Num TwosComplement::subtract(TwosComplement_Num a, TwosComplement_Num b){
 
-        return *new TwosComplement_Num(a.floatVal() + b.floatVal(),a.getSize(),a.getPrecision());
+        return *new TwosComplement_Num(a.floatVal() - b.floatVal(),a.getSize(),a.getPrecision());
     };
 
     TwosComplement_Num TwosComplement::multiply(TwosComplement_Num a, TwosComplement_Num b){
 
-        return *new TwosComplement_Num(a.floatVal() + b.floatVal(),a.getSize(),a.getPrecision());
+        return *new TwosComplement_Num(a.floatVal() * b.floatVal(),a.getSize(),a.getPrecision());
     };
 
     TwosComplement_Num TwosComplement::divide(TwosComplement_Num a, TwosComplement_Num b){
 
-        return *new TwosComplement_Num(a.floatVal() + b.floatVal(),a.getSize(),a.getPrecision());
+        return *new TwosComplement_Num(a.floatVal() / b.floatVal(),a.getSize(),a.getPrecision());
     };
 }
