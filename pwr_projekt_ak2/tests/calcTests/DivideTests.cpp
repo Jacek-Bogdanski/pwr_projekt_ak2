@@ -10,12 +10,12 @@ TEST(DivideTest, DivideNoFailure)
 {
     TwosComplement_Num a = *new TwosComplement_Num(16,16,0);
     TwosComplement_Num b = *new TwosComplement_Num(4,16,0);
-    EXPECT_EQ(TwosComplement::subtract(a,b).floatVal(), 4.0);
+    EXPECT_EQ(TwosComplement::divide(a,b).floatVal(), 4.0);
 }
 
 TEST(DivideTest, DivideNegativesNoFailure)
 {
     TwosComplement_Num a = *new TwosComplement_Num(-8,16,0);
     TwosComplement_Num b = *new TwosComplement_Num(-4,16,0);
-    EXPECT_EQ(TwosComplement::subtract(a,b).floatVal(), 2.0);
+    EXPECT_EQ(TwosComplement::divide(a,b).floatVal(), 2.0);
 }
