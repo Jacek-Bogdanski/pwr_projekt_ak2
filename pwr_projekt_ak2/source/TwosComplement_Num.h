@@ -6,6 +6,7 @@
 #define PWR_PROJEKT_AK2_TWOSCOMPLEMENT_NUM_H
 
 #include <vector>
+#include <string>
 
 class TwosComplement_Num {
 
@@ -32,15 +33,7 @@ public:
      * @param size
      * @param precision
      */
-    TwosComplement_Num(float a, int size, int precision);
-
-    /**
-     * constructor for int
-     * @param a
-     * @param size
-     * @param precision
-     */
-    TwosComplement_Num(int a, int size, int precision);
+    TwosComplement_Num(double a, int size, int precision);
 
     /**
      * method to check, if number is negative
@@ -60,6 +53,12 @@ public:
      * @return float value of number
      */
     float floatVal();
+
+    /**
+     * method returning bit string
+     * @return bit string
+     */
+    std::string bitString();
 
     /**
      * Getter for size
