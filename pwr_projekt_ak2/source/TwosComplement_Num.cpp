@@ -14,7 +14,7 @@ TwosComplement_Num::TwosComplement_Num(float a, int size=16, int precision = -4)
     this->precision = precision;
     this->size = size;
 
-    this->data = std::vector<bool>(this->size);
+    this->data = std::vector<bool>(this->size,0);
 }
 
 /**
@@ -27,7 +27,7 @@ TwosComplement_Num::TwosComplement_Num(int a, int size=16, int precision = 0){
     this->precision = precision;
     this->size = size;
 
-    this->data = std::vector<bool>(this->size);
+    this->data = std::vector<bool>(this->size,0);
 }
 
 /**
