@@ -8,7 +8,6 @@
 class ArithmeticLibrary {
 public:
     static bool debugMode;
-    template <size_t N>
     static int sum_v1(int a, int b);
     static int sum_v2(int a, int b);
     static int sum_v3_asm(int a, int b);

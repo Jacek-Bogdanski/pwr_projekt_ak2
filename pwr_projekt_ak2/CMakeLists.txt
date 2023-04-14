@@ -10,6 +10,10 @@ set(SOURCE_FILES
         main.cpp
         source/ArithmeticLibrary.cpp
         source/ArithmeticLibrary.h
+        source/TwosComplement_Num.cpp
+        source/TwosComplement_Num.h
+        source/TwosComplement_ArithmeticLibrary.cpp
+        source/TwosComplement_ArithmeticLibrary.h
         )
 
 add_executable(calc ${SOURCE_FILES})
