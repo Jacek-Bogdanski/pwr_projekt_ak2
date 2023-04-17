@@ -20,12 +20,13 @@ class TwosComplement_Num {
      */
     int size;
 
+public:
+
     /**
      * variable holding bits
      */
     std::vector<bool> data;
 
-public:
 
     /**
      * constructor for float
