@@ -12,6 +12,7 @@ namespace TwosComplement {
     TwosComplement_Num subtract(TwosComplement_Num a, TwosComplement_Num b);
     TwosComplement_Num multiply(TwosComplement_Num a, TwosComplement_Num b);
     TwosComplement_Num divide(TwosComplement_Num a, TwosComplement_Num b);
+    TwosComplement_Num negate(TwosComplement_Num a);
 }
 
 #endif //PWR_PROJEKT_AK2_TWOSCOMPLEMENT_ARITHMETICLIBRARY_H

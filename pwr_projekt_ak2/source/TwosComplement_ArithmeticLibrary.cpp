@@ -39,8 +39,9 @@ namespace TwosComplement {
     };
 
     TwosComplement_Num subtract(TwosComplement_Num a, TwosComplement_Num b){
-
-        return *new TwosComplement_Num(a.floatVal() - b.floatVal(),a.getSize(),a.getPrecision());
+        TwosComplement_Num negative_b = TwosComplement::negate(b);
+        TwosComplement_Num result = TwosComplement::add(a,b);
+        return result;
     };
 
     TwosComplement_Num multiply(TwosComplement_Num a, TwosComplement_Num b){
