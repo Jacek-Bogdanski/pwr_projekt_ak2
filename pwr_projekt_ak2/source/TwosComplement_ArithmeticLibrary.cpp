@@ -51,4 +51,14 @@ namespace TwosComplement {
     TwosComplement_Num divide(TwosComplement_Num a, TwosComplement_Num b){
         return *new TwosComplement_Num(a.floatVal() / b.floatVal(),a.getSize(),a.getPrecision());
     };
+
+    TwosComplement_Num negate(TwosComplement_Num a){
+        for (int i = 0; i < a.getSize(); i++) {
+            a.data[i] = !a.data[i];
+        }
+        // add 1
+        TwosComplement_Num b(1, a.getSize(), a.getPrecision() );
+        a = add(a,b);
+        return a;
+    };
 }
