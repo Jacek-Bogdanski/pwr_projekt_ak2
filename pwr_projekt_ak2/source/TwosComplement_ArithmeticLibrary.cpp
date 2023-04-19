@@ -40,7 +40,7 @@ namespace TwosComplement {
 
     TwosComplement_Num subtract(TwosComplement_Num a, TwosComplement_Num b){
         TwosComplement_Num negative_b = TwosComplement::negate(b);
-        TwosComplement_Num result = TwosComplement::add(a,b);
+        TwosComplement_Num result = TwosComplement::add(a,negative_b);
         return result;
     };
 
