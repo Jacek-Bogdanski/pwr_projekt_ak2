@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 #include "TwosComplement_ArithmeticLibrary.h"
 #include "TwosComplement_Num.h"
 
@@ -58,7 +59,7 @@ namespace TwosComplement {
             a.data[i] = !a.data[i];
         }
         // add 1
-        TwosComplement_Num b(1, a.getSize(), a.getPrecision() );
+        TwosComplement_Num b(1*pow(2,a.getPrecision()), a.getSize(), a.getPrecision() );
         a = add(a,b);
         return a;
     };
