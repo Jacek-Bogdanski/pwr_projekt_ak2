@@ -31,6 +31,6 @@ TEST(SubtractTest, SubtractNegativesNoFailure)
 TEST(SubtractTest, SubtractFloatsNoFailure)
 {
     TwosComplement_Num a = *new TwosComplement_Num(3.0,16,-8);
-    TwosComplement_Num b = *new TwosComplement_Num(2.1,16,-8);
-    EXPECT_EQ(round((TwosComplement::subtract(a,b).floatVal())*10.0)/10.0, 0.9);
+    TwosComplement_Num b = *new TwosComplement_Num(2.5,16,-8);
+    EXPECT_EQ(round((TwosComplement::subtract(a,b).floatVal())*10.0)/10.0, 0.5);
 }
