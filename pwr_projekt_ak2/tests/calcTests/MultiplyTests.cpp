@@ -30,7 +30,8 @@ TEST(MultiplyTest, MultiplyNegativesNoFailure)
 
 TEST(MultiplyTest, MultiplyFloatsNoFailure)
 {
-    TwosComplement_Num a = *new TwosComplement_Num(3.0,16,-8);
-    TwosComplement_Num b = *new TwosComplement_Num(2.1,16,-8);
-    EXPECT_EQ(round((TwosComplement::multiply(a,b).floatVal())*10.0)/10.0, 6.3);
+    TwosComplement_Num a = *new TwosComplement_Num(4.0,16,-8);
+    TwosComplement_Num b = *new TwosComplement_Num(2.5,16,-8);
+    float result = TwosComplement::multiply(a,b).floatVal();
+    EXPECT_EQ(round(result*10.0)/10.0, 10.0);
 }

@@ -61,6 +61,9 @@ TwosComplement_Num::TwosComplement_Num(double a, int size = 16, int precision = 
  * @return true when negative, false when positive
  */
 bool TwosComplement_Num::isNegative() {
+    if(this->data[0]==1){
+        return true;
+    }
     return false;
 }
 
@@ -70,6 +73,23 @@ bool TwosComplement_Num::isNegative() {
  */
 bool TwosComplement_Num::isPositive() {
     return !TwosComplement_Num::isNegative();
+}
+
+/**
+ * Function doubling size of number
+ */
+void TwosComplement_Num::doubleSize(){
+    int value = 0;
+    if(this->isNegative()){
+        value = 1;
+    }
+    // kopia bitów
+    std::vector<bool> vect = std::vector<bool>(2*this->size, value);
+    for (int i = 0; i < this->size; i++) {
+        vect[i+this->size] = this->data[i];
+    }
+    this->size *= 2;
+    this->data = vect;
 }
 
 /**

@@ -79,6 +79,10 @@ public:
      */
     std::vector<bool> getData();
 
+    /**
+     * Function doubling size of number
+     */
+    void doubleSize();
 };
 
 

@@ -13,6 +13,8 @@ namespace TwosComplement {
     TwosComplement_Num multiply(TwosComplement_Num a, TwosComplement_Num b);
     TwosComplement_Num divide(TwosComplement_Num a, TwosComplement_Num b);
     TwosComplement_Num negate(TwosComplement_Num a);
+
+    std::vector<bool> addVectors(std::vector<bool> a, std::vector<bool> b, int size);
 }
 
 #endif //PWR_PROJEKT_AK2_TWOSCOMPLEMENT_ARITHMETICLIBRARY_H
