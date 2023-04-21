@@ -93,26 +93,52 @@ namespace TwosComplement {
             b = negate(b);
         }
 
-        // std::cout<<std::endl<<a.bitString()<<std::endl;
-        // std::cout<<b.bitString()<<std::endl<<std::endl;
+         std::cout<<std::endl<<a.bitString()<<" = "<<a.floatVal()<<std::endl;
+         std::cout<<b.bitString()<<" = "<<b.floatVal()<<std::endl<<std::endl;
 
         int size = std::max(a.getSize(), b.getSize());
         int precision = std::max(a.getPrecision(), b.getPrecision());
         TwosComplement_Num result(0, size, precision*2);
 
+        std::vector<bool> shifted_a = a.data;
+
+        std::vector<bool> result_n = std::vector<bool>(size, 0);
 
         // Perform binary multiplication
-        for (int i = 0; i < size/2; i++) {
-            if (b.data[size-1-i]) {
-                std::vector<bool> shifted_a = a.data;
+        for (int i = size-1; i >=(size-1)/2; i--) {
+            bool carry = false;
 
-                // bit shift on vector, fill zeros
-                shifted_a.erase(shifted_a.begin(),shifted_a.begin()+i);
-                shifted_a.insert(shifted_a.end(), i, 0);
+            bool num_b = b.data[i];
+            for (int k = size - 1; k >= 0; k--) {
+                bool num_a = shifted_a[k];
 
-                result.data = addVectors(result.data, shifted_a,size);
+                bool sum = result_n[k];
+                asm (
+                        "movzbl %1, %%eax\n\t"
+                        "mul %2\n\t"
+                        "add %%al, %0\n\t"
+                        : "+r" (sum)
+                        : "r" (num_a), "r" (num_b)
+                        : "cc", "%eax"
+                        );
+                asm (
+                        "adc %1, %0\n\t"
+                        : "+r" (sum)
+                        : "r" (carry)
+                        : "cc"
+                        );
+
+                result_n[k] = sum%2;
+                carry = carry && num_a && num_b;
             }
+
+            // bit shift on vector, fill zeros
+            shifted_a.erase(shifted_a.begin(),shifted_a.begin()+1);
+            shifted_a.insert(shifted_a.end(), 1, 0);
         }
+
+        result.data = result_n;
+        std::cout<<result.bitString()<<" = "<<result.floatVal()<<std::endl<<std::endl;
 
         // return correct negatives
         if(aNegative != bNegative){

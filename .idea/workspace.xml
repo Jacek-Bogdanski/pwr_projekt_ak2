@@ -26,14 +26,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="update methods">
+    <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="add doubled size test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_ArithmeticLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_ArithmeticLibrary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.h" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/AddTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/AddTests.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/DivideTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/DivideTests.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/MultiplyTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/MultiplyTests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,26 +73,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jacekbogdanski/CLionProjects/pwr_projekt_ak2/pwr_projekt_ak2/tests/calcTests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/Users/jacekbogdanski/CLionProjects/pwr_projekt_ak2/pwr_projekt_ak2/tests/calcTests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests" />
@@ -108,11 +105,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.gtest_main">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="calcTests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="calcTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="calcTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -198,6 +190,8 @@
       <workItem from="1679235043917" duration="1000" />
       <workItem from="1679235246579" duration="85000" />
       <workItem from="1681237084389" duration="657000" />
+      <workItem from="1681901268832" duration="8274000" />
+      <workItem from="1682102320937" duration="2594000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1679148961273</created>
@@ -262,7 +256,42 @@
       <option name="project" value="LOCAL" />
       <updated>1681463100711</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix subtract">
+      <created>1681901747664</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681901747664</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update test">
+      <created>1681901762796</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681901762796</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update subtract">
+      <created>1681902400865</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681902400865</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add multiply">
+      <created>1682009631083</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682009631083</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add doubled size test">
+      <created>1682009653565</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682009653565</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +323,11 @@
     <MESSAGE value="update vector" />
     <MESSAGE value="update tests" />
     <MESSAGE value="update methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="update methods" />
+    <MESSAGE value="fix subtract" />
+    <MESSAGE value="update test" />
+    <MESSAGE value="update subtract" />
+    <MESSAGE value="add multiply" />
+    <MESSAGE value="add doubled size test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add doubled size test" />
   </component>
 </project>
