@@ -9,34 +9,6 @@
 
 namespace TwosComplement {
 
-    std::vector<bool> addVectors(std::vector<bool> a, std::vector<bool> b, int size){
-        std::vector<bool> result = std::vector<bool>(size, 0);
-        bool carry = false;
-        for (int i = size - 1; i >= 0; i--) {
-            bool num_a = a[i];
-            bool num_b = b[i];
-            bool sum = false;
-            asm (
-                    "add %1, %0\n\t"
-                    "adc %2, %0\n\t"
-                    : "+r" (sum)
-                    : "r" (num_a), "r" (num_b)
-                    : "cc"
-                    );
-            asm (
-                    "adc %1, %0\n\t"
-                    : "+r" (sum)
-                    : "r" (carry)
-                    : "cc"
-                    );
-
-            result[i] = sum%2;
-            carry = (num_a && num_b) || (num_a && carry) || (num_b && carry);
-        }
-
-        return result;
-    }
-
     TwosComplement_Num add(TwosComplement_Num a, TwosComplement_Num b){
         int size = std::max(a.getSize(), b.getSize());
         int precision = std::max(a.getPrecision(), b.getPrecision());
