@@ -65,8 +65,8 @@ namespace TwosComplement {
             b = negate(b);
         }
 
-         std::cout<<std::endl<<a.bitString()<<" = "<<a.floatVal()<<std::endl;
-         std::cout<<b.bitString()<<" = "<<b.floatVal()<<std::endl<<std::endl;
+//         std::cout<<std::endl<<a.bitString()<<" = "<<a.floatVal()<<std::endl;
+//         std::cout<<b.bitString()<<" = "<<b.floatVal()<<std::endl<<std::endl;
 
         int size = std::max(a.getSize(), b.getSize());
         int precision = std::max(a.getPrecision(), b.getPrecision());
@@ -110,7 +110,7 @@ namespace TwosComplement {
         }
 
         result.data = result_n;
-        std::cout<<result.bitString()<<" = "<<result.floatVal()<<std::endl<<std::endl;
+//        std::cout<<result.bitString()<<" = "<<result.floatVal()<<std::endl<<std::endl;
 
         // return correct negatives
         if(aNegative != bNegative){
