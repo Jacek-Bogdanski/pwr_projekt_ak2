@@ -45,3 +45,10 @@ TEST(AddTest, AddDoubledSizeNoFailure)
 
     EXPECT_EQ(TwosComplement::add(a,b).floatVal(), 20.0);
 }
+
+TEST(AddTest, AddOverflowFailure)
+{
+    TwosComplement_Num a = *new TwosComplement_Num(pow(2,15),16,0);
+    TwosComplement_Num b = *new TwosComplement_Num(pow(2,15),16,0);
+    EXPECT_EQ(TwosComplement::add(a,b).floatVal(), 2*pow(2,15));
+}

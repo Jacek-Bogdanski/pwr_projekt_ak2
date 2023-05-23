@@ -142,7 +142,7 @@ public:
      * @param b
      * @return
      */
-    TwosComplement_Num divide(TwosComplement_Num b);
+    void divide(TwosComplement_Num b);
 
     /**
      * Negacja liczby

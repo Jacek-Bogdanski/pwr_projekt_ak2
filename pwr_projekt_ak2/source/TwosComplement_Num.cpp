@@ -310,8 +310,9 @@ TwosComplement_Num TwosComplement_Num::divide(TwosComplement_Num a, TwosCompleme
     return *new TwosComplement_Num(a.floatVal() / b.floatVal(),a.getSize(),a.getPrecision());
 };
 
-TwosComplement_Num TwosComplement_Num::divide(TwosComplement_Num b){
-    return TwosComplement_Num::divide(*this,b);
+void TwosComplement_Num::divide(TwosComplement_Num b){
+    TwosComplement_Num c = TwosComplement_Num::divide(*this,b);
+    *this = c;
 }
 
 
