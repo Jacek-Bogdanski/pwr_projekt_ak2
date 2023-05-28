@@ -12,7 +12,7 @@
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="pwr_projekt_ak2" targetName="gmock" />
-      <config projectName="pwr_projekt_ak2" targetName="main.cpp" />
+      <config projectName="pwr_projekt_ak2" targetName="TwosComplement_Num.cpp" />
       <config projectName="pwr_projekt_ak2" targetName="calcTests" />
       <config projectName="pwr_projekt_ak2" targetName="calc" />
       <config projectName="pwr_projekt_ak2" targetName="gtest_main" />
@@ -26,9 +26,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="add doubled size test">
+    <list default="true" id="61af9a1b-6211-498d-9bbc-c72ae956e2b2" name="Changes" comment="remove addVectors func">
+      <change afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Exception.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Exception.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_ArithmeticLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_ArithmeticLibrary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/ArithmeticLibrary.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_ArithmeticLibrary.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_ArithmeticLibrary.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.h" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/source/TwosComplement_Num.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/AddTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/AddTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/DivideTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/DivideTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/MultiplyTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/MultiplyTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/SubtractTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests/SubtractTests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,28 +89,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/jacekbogdanski/CLionProjects/pwr_projekt_ak2/pwr_projekt_ak2/tests/calcTests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jacekbogdanski/CLionProjects/pwr_projekt_ak2/pwr_projekt_ak2/tests/calcTests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pwr_projekt_ak2/tests/calcTests" />
@@ -105,6 +121,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.gtest_main">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="calcTests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="calcTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="calcTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -113,6 +134,11 @@
     </configuration>
     <configuration name="pwr_projekt_ak2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory">
       <method v="2" />
+    </configuration>
+    <configuration name="TwosComplement_Num.cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="TwosComplement_Num.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="TwosComplement_Num.cpp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration name="aLib" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="sum 8 2" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="aLib" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="aLib">
       <method v="2">
@@ -149,11 +175,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main.cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="main.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="main.cpp">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="pwr_projekt_ak2" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-sum" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pwr_projekt_ak2" TARGET_NAME="pwr_projekt_ak2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pwr_projekt_ak2" RUN_TARGET_NAME="pwr_projekt_ak2">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -164,7 +185,7 @@
       <item itemvalue="CMake Application.pwr_projekt_ak2" />
       <item itemvalue="CMake Application.aLib" />
       <item itemvalue="CMake Application.calc" />
-      <item itemvalue="CMake Application.main.cpp" />
+      <item itemvalue="CMake Application.TwosComplement_Num.cpp" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
@@ -191,7 +212,11 @@
       <workItem from="1679235246579" duration="85000" />
       <workItem from="1681237084389" duration="657000" />
       <workItem from="1681901268832" duration="8274000" />
-      <workItem from="1682102320937" duration="2594000" />
+      <workItem from="1682102320937" duration="4316000" />
+      <workItem from="1682239347434" duration="25000" />
+      <workItem from="1682239385761" duration="36000" />
+      <workItem from="1684874262118" duration="257000" />
+      <workItem from="1685293687398" duration="5673000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1679148961273</created>
@@ -291,7 +316,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682009653565</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add assembly multiply">
+      <created>1682107077710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682107077710</updated>
+    </task>
+    <task id="LOCAL-00016" summary="remove addVectors func">
+      <created>1682107105679</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682107105679</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +367,8 @@
     <MESSAGE value="update subtract" />
     <MESSAGE value="add multiply" />
     <MESSAGE value="add doubled size test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add doubled size test" />
+    <MESSAGE value="add assembly multiply" />
+    <MESSAGE value="remove addVectors func" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove addVectors func" />
   </component>
 </project>

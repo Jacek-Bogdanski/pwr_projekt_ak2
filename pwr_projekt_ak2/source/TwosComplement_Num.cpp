@@ -3,6 +3,7 @@
 //
 
 #include "TwosComplement_Num.h"
+#include "TwosComplement_Exception.h"
 #include <iostream>
 #include <cmath>
 #include <sstream>
@@ -14,6 +15,9 @@
  * @param precision
  */
 TwosComplement_Num::TwosComplement_Num(double a, int size = 16, int precision = -4) {
+    if(size<1){
+        throw TwosComplement_Exception("invalid size");
+    }
     this->precision = precision;
     this->size = size;
     this->data = std::vector<bool>(this->size, 0);
@@ -25,6 +29,11 @@ TwosComplement_Num::TwosComplement_Num(double a, int size = 16, int precision = 
     int power = precision + size - 1;
     double value = pow(2, power);
 
+    // liczba nie moze byc wieksza od 2*max-1
+    if(a > (value * 2 - 1)){
+        throw TwosComplement_Exception("number-overflow");
+    }
+
     for (int i = 0; i < size; i++) {
         if (value <= a && a > 0) {
             this->data[i] = 1;
@@ -33,6 +42,11 @@ TwosComplement_Num::TwosComplement_Num(double a, int size = 16, int precision = 
             this->data[i] = 0;
         }
         value /= 2;
+    }
+
+    // pierwszy bit pozostaje zerowy, inaczej reprezentacja nie jest prawidlowa
+    if(this->data[0]==1){
+        throw TwosComplement_Exception("number-overflow");
     }
 
     if (isNegative) {
@@ -55,7 +69,6 @@ TwosComplement_Num::TwosComplement_Num(double a, int size = 16, int precision = 
     }
 }
 
-
 /**
  * method to check, if number is negative
  * @return true when negative, false when positive
@@ -72,7 +85,10 @@ bool TwosComplement_Num::isNegative() {
  * @return true when positive, false when negative
  */
 bool TwosComplement_Num::isPositive() {
-    return !TwosComplement_Num::isNegative();
+    if(this->data[0]==1){
+        return false;
+    }
+    return true;
 }
 
 /**
@@ -89,6 +105,27 @@ void TwosComplement_Num::doubleSize(){
         vect[i+this->size] = this->data[i];
     }
     this->size *= 2;
+    this->data = vect;
+}
+
+/**
+ * Function setting size of number
+ */
+void TwosComplement_Num::setSize(int newSize){
+    if(newSize < this->size){
+        return;
+    }
+    int diff = newSize-this->size;
+    int value = 0;
+    if(this->isNegative()){
+        value = 1;
+    }
+    // kopia bitów
+    std::vector<bool> vect = std::vector<bool>(newSize, value);
+    for (int i = 0; i < this->size; i++) {
+        vect[i+diff] = this->data[i];
+    }
+    this->size = newSize;
     this->data = vect;
 }
 
@@ -182,11 +219,26 @@ std::vector<bool> TwosComplement_Num::getData(){
 
 
 TwosComplement_Num TwosComplement_Num::add(TwosComplement_Num a, TwosComplement_Num b){
-    int size = std::max(a.getSize(), b.getSize());
-    int precision = std::max(a.getPrecision(), b.getPrecision());
-    TwosComplement_Num result(0, size, precision);
+    int precision_n = std::min(a.getPrecision(), b.getPrecision());
+    // wyrownanie przecyzji
+    if(a.getPrecision() != precision_n){
+        a.setPrecision(precision_n);
+    }
+    if(b.getPrecision() != precision_n){
+        b.setPrecision(precision_n);
+    }
 
-    // TODO: rozne precyzje - przesuniecie zeby byly rowno
+    int size_n = std::max(a.getSize(), b.getSize());
+    // wyrownanie rozmiaru
+    if(a.getSize() != size_n){
+        a.setSize(size_n);
+    }
+    if(b.getSize() != size_n){
+        b.setSize(size_n);
+    }
+
+    // liczba wynikowa
+    TwosComplement_Num result(0, size_n, precision_n);
 
     bool carry = false;
     for (int i = a.getSize() - 1; i >= 0; i--) {
@@ -211,6 +263,15 @@ TwosComplement_Num TwosComplement_Num::add(TwosComplement_Num a, TwosComplement_
         carry = (num_a && num_b) || (num_a && carry) || (num_b && carry);
     }
 
+    if(carry && !(a.isNegative() || b.isNegative())){
+        throw TwosComplement_Exception("overflow");
+    }
+
+    // jesli znaki nie sa poprawne
+    if(a.isPositive() && b.isPositive() && result.isNegative()){
+        throw TwosComplement_Exception("overflow");
+    }
+
     return result;
 };
 
@@ -233,7 +294,26 @@ TwosComplement_Num TwosComplement_Num::multiply(TwosComplement_Num a, TwosComple
     a.doubleSize();
     b.doubleSize();
 
-    // TODO: rozne precyzje - przesuniecie zeby byly rowno
+    int precision_n = std::min(a.getPrecision(), b.getPrecision());
+    // wyrownanie przecyzji
+    if(a.getPrecision() != precision_n){
+        a.setPrecision(precision_n);
+    }
+    if(b.getPrecision() != precision_n){
+        b.setPrecision(precision_n);
+    }
+
+    int size_n = std::max(a.getSize(), b.getSize());
+    // wyrownanie rozmiaru
+    if(a.getSize() != size_n){
+        a.setSize(size_n);
+    }
+    if(b.getSize() != size_n){
+        b.setSize(size_n);
+    }
+
+    // liczba wynikowa
+    TwosComplement_Num result(0, size_n, precision_n*2);
 
     // znak
     bool aNegative = a.isNegative();
@@ -245,23 +325,16 @@ TwosComplement_Num TwosComplement_Num::multiply(TwosComplement_Num a, TwosComple
         b = TwosComplement_Num::negate(b);
     }
 
-//         std::cout<<std::endl<<a.bitString()<<" = "<<a.floatVal()<<std::endl;
-//         std::cout<<b.bitString()<<" = "<<b.floatVal()<<std::endl<<std::endl;
-
-    int size = std::max(a.getSize(), b.getSize());
-    int precision = std::max(a.getPrecision(), b.getPrecision());
-    TwosComplement_Num result(0, size, precision*2);
-
     std::vector<bool> shifted_a = a.data;
-
-    std::vector<bool> result_n = std::vector<bool>(size, 0);
+    std::vector<bool> result_n = std::vector<bool>(size_n, 0);
+    bool carry;
 
     // Perform binary multiplication
-    for (int i = size-1; i >=(size-1)/2; i--) {
-        bool carry = false;
+    for (int i = size_n-1; i >=(size_n-1)/2; i--) {
+        carry = false;
 
         bool num_b = b.data[i];
-        for (int k = size - 1; k >= 0; k--) {
+        for (int k = size_n - 1; k >= 0; k--) {
             bool num_a = shifted_a[k];
 
             bool sum = result_n[k];
@@ -289,8 +362,11 @@ TwosComplement_Num TwosComplement_Num::multiply(TwosComplement_Num a, TwosComple
         shifted_a.insert(shifted_a.end(), 1, 0);
     }
 
+    if(carry){
+        throw TwosComplement_Exception("overflow");
+    }
+
     result.data = result_n;
-//        std::cout<<result.bitString()<<" = "<<result.floatVal()<<std::endl<<std::endl;
 
     // return correct negatives
     if(aNegative != bNegative){
@@ -305,7 +381,7 @@ TwosComplement_Num TwosComplement_Num::multiply(TwosComplement_Num b){
 
 TwosComplement_Num TwosComplement_Num::divide(TwosComplement_Num a, TwosComplement_Num b){
     if(b.floatVal()==0){
-        throw "Division by zero!";
+        throw TwosComplement_Exception("division-by-zero");
     }
     return *new TwosComplement_Num(a.floatVal() / b.floatVal(),a.getSize(),a.getPrecision());
 };
@@ -325,3 +401,24 @@ TwosComplement_Num TwosComplement_Num::negate(TwosComplement_Num a){
     a = TwosComplement_Num::add(a,b);
     return a;
 };
+
+/**
+ * Function setting precision for number precision match
+ */
+void TwosComplement_Num::setPrecision(int newPrecision){
+    int diff = newPrecision - precision;
+    if(diff >= 0){
+        return;
+    }
+    diff = -diff;
+
+    // kopia bitów
+    std::vector<bool> vect = std::vector<bool>(this->size + diff, 0);
+    for (int i = 0; i < this->size; i++) {
+        vect[i] = this->data[i];
+    }
+
+    this->size += diff;
+    this->precision = newPrecision;
+    this->data = vect;
+}

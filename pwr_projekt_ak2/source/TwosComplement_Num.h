@@ -90,12 +90,11 @@ public:
      * @param b second number
      * @return sum of numbers a, b
      */
-    TwosComplement_Num add(TwosComplement_Num a, TwosComplement_Num b);
+    static TwosComplement_Num add(TwosComplement_Num a, TwosComplement_Num b);
 
     /**
      * Dodanie liczby do obiektu
      * @param b
-     * @return
      */
     TwosComplement_Num add(TwosComplement_Num b);
 
@@ -105,12 +104,11 @@ public:
      * @param b second number
      * @return diff of numbers a, b
      */
-    TwosComplement_Num subtract(TwosComplement_Num a, TwosComplement_Num b);
+    static TwosComplement_Num subtract(TwosComplement_Num a, TwosComplement_Num b);
 
     /**
      * Odjęcie liczby od obiektu
      * @param b
-     * @return
      */
     TwosComplement_Num subtract(TwosComplement_Num b);
 
@@ -120,12 +118,11 @@ public:
      * @param b second number
      * @return iloczyn of numbers a, b
      */
-    TwosComplement_Num multiply(TwosComplement_Num a, TwosComplement_Num b);
+    static TwosComplement_Num multiply(TwosComplement_Num a, TwosComplement_Num b);
 
     /**
      * Pomnożenie liczby przez obiekt
      * @param b
-     * @return
      */
     TwosComplement_Num multiply(TwosComplement_Num b);
 
@@ -135,12 +132,11 @@ public:
      * @param b second number
      * @return iloraz of numbers a, b
      */
-    TwosComplement_Num divide(TwosComplement_Num a, TwosComplement_Num b);
+    static TwosComplement_Num divide(TwosComplement_Num a, TwosComplement_Num b);
 
     /**
      * Podzielenie obiektu przez liczbę
      * @param b
-     * @return
      */
     void divide(TwosComplement_Num b);
 
@@ -149,7 +145,22 @@ public:
      * @param a number
      * @return negation of number
      */
-    TwosComplement_Num negate(TwosComplement_Num a);
+    static TwosComplement_Num negate(TwosComplement_Num a);
+
+    /**
+     * Negacja obiektu
+     */
+    void negate();
+
+    /**
+     * Ustawienie nowej precyzji obiektu ze zmiana dlugosci
+     */
+    void setPrecision(int newPrecision);
+
+    /**
+     * Ustawienie nowego rozmiaru obiektu z rozszerzeniem
+     */
+    void setSize(int newSize);
 };
 
 

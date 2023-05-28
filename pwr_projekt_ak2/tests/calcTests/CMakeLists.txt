@@ -7,11 +7,9 @@ set(SOURCE_FILES
         DivideTests.cpp
         ../../source/TwosComplement_Num.cpp
         ../../source/TwosComplement_Num.h
-        ../../source/TwosComplement_ArithmeticLibrary.cpp
-        ../../source/TwosComplement_ArithmeticLibrary.h
-        )
+        ../../source/TwosComplement_Exception.cpp
+        ../../source/TwosComplement_Exception.h)
 
 add_executable(calcTests ${SOURCE_FILES})
-
 
 target_link_libraries(calcTests gtest gtest_main)
