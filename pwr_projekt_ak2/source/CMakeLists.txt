@@ -5,6 +5,6 @@ set(SOURCE_FILES
         TwosComplement_Num.h
         TwosComplement_Exception.cpp
         TwosComplement_Exception.h
-        )
+        main.cpp)
 
-add_executable(${SOURCE_FILES})
+add_executable(main ${SOURCE_FILES} main.cpp)
